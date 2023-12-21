@@ -1,0 +1,245 @@
+body {
+background-image: linear-gradient(white, black)
+
+}
+
+header img {
+    
+    width: 100%; /*This stretches the image across the viewport.*/
+    height: auto; /*The height will change based on the size of the viewport*/
+    max-width: 500px;
+}
+
+nav {
+    /*background-color: white;
+    border-top: solid 0.3em black;
+    border-bottom: solid 0.3em black;*/
+    border-radius: 1.0em; /*This rounds the corners of elements*/
+
+    font-weight: bold;
+    text-align: center;
+}
+
+nav ul{
+    padding: 0;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+/*You can comment work out to test it/ see the difference*/
+
+}
+
+nav li { 
+    background-color: black;
+    padding: 1em;
+    min-width: 12%;
+    margin: .25em;
+    list-style-type: none; /*This removes bullet points*/
+}
+nav ul li a {  /* The a represents the anchor element <a>*/
+    color: white;
+    text-decoration: none; /* This removes the underline form the hyperlink*/
+}
+
+figure {
+text-align: center;
+/*background-color: white;*/
+}
+
+figure img {
+    max-width: 800px;
+    max-height: 600px;
+    width: 100%;
+    height: auto;
+}
+
+main {
+    /*background-color: white;
+    border-top: solid 0.3em black;
+    border-bottom: solid 0.3em black;*/
+    
+    padding: 1em;
+    border-radius: 1.0em; /*This rounds the corners of elements.*/
+    margin-top: 1em; /*This places some space between elements.*/
+    min-height: 300px;
+    background-image: linear-gradient(white, white, grey)
+}
+/*This was for our 3-column layout begin.*/
+main .row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+main div .column {
+    float: left;
+
+}
+
+main div .left {
+    padding: 0.5%;
+    width: 20%;
+    float: left;
+    
+}
+
+/*main div .center {
+    padding: 10px;*/
+    /*width: 64%;
+
+}*/
+
+main div .right {
+    padding: 0.5%;
+    width: 15%;
+    float: right;
+    
+}
+/* sometimes if we descend too much it may not work. Descending is good practice but may need to back out*/
+
+/*3-column layout end*/
+
+/*.scheduale table begin.*/
+.schedule table {
+    border: 0.1em solid black;
+    border-collapse: collapse;
+    width: 95%;
+    margin-left: 2.5%;
+    background-color: white;
+}
+
+.schedule caption{
+    border: 0.1em solid black;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.schedule th, .schedule td {
+    border: 0.1em solid black;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.schedule th{
+    background-color: black;
+    color: white;
+}
+
+#enrollprice {
+    border: 0.1em solid black;
+    border-collapse: collapse;
+}
+
+#enrollprice td{
+    border: 0.1em solid black;
+    padding: 0.5em;
+    text-align: center;
+}
+
+/*.scheduale table end*/
+
+footer{
+    /*background-color: white;
+    margin-top: 1em; /*This places some space between elements.
+    border-top: solid 0.3em black;
+    border-bottom: solid 0.3em black;*/
+
+    background-image: linear-gradient(to right,  white, white, black);
+    border-radius: 1.0em; /*This rounds the corners of elements.*/
+    box-shadow: 0.5em 0.5em 0.5em;
+    text-align: center;
+}
+/*Begin mobile.*/
+@media screen and (max-width: 639px) {
+
+    nav ul li {
+        border-radius: 1em;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: none;
+    }
+    
+}
+/*End mobile.*/
+
+/*Begin tablet.*/
+@media screen and (min-width: 641px) {
+
+    nav ul li {
+        display: inline-block; /*This lists items horizontally and allow them to stretch.*/
+        border-radius: 1em;
+        box-shadow: 0.5em 0.5em 0.5em black;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    main div .center {
+        width: 66%;
+        /*border-left: 0.3em solid black;*/
+        border-right: 0.3em solid black;
+    
+}
+    
+}
+/*End tablet.*/
+
+/*Begin desktop.*/
+@media screen and (min-width: 960px) {
+
+    header {
+        background-image: linear-gradient(to right, white, black, black, black);
+        box-shadow: 0.5em 0.5em 0.5em;
+    }
+
+
+    header img {
+        width: auto;
+        height: 5em;
+    }
+    nav{
+        margin-top: -5.1em; /* This moves the nav element above where it would normally be.*/
+        width: 60%;
+        float: right; /* This floats the nav element to the right side of the page.*/
+        background-color: black;
+        border-top: solid 0.2em black;
+        border-bottom: solid 0.2em black;
+
+    }
+
+    nav ul li {
+        display: inline-block; /* This lists items horizontally and allow them to stretch.*/
+        border-radius: 1em;
+       
+    }
+
+    .desktop{
+        display:block;
+    }
+
+    nav {
+        margin-top: -5.1em;
+        width: 60%;
+        float: right;
+        border-top: 0.2em;
+        border-bottom: 0.2em;
+        padding-top: 0.4em;
+        padding-bottom: 0.4em;
+    }
+
+    main div .center {
+        padding: 0.5%;
+        width: 55%;
+        border-right: 0.2em solid black;
+        border-left: 0.2em solid black ;
+}
+
+}
+
+/*End desktop.*/
